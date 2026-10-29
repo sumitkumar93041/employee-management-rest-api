@@ -14,6 +14,24 @@ A secured RESTful backend for managing employee records, built with **Spring Boo
 - JUnit 5, Mockito, MockMvc and H2 (in-memory, tests only)
 - Tested manually with Postman
 
+- ## Live demo
+
+- **App:** https://employee-management-ui-delta.vercel.app
+- **API:** https://employee-management-api-zp0h.onrender.com
+- Create an account on the Register page to try it.
+
+> Free-tier hosting: the backend sleeps when idle, so the first request can take about a minute, and the free database may need to be powered on after a long pause.
+
+## Deployment
+
+| Part | Host |
+| --- | --- |
+| React frontend | Vercel |
+| Spring Boot API (Docker, multi-stage build) | Render |
+| MySQL | Aiven |
+
+Configuration comes from environment variables (`DB_URL`, `DB_USER_WORKBENCH`, `DB_PASS_WORKBENCH`, `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `CORS_ORIGIN`). No secrets are stored in the repository.
+
 ## Features
 
 - CRUD endpoints under `/employees`
